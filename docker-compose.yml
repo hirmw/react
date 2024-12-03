@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  react-app:
+    build:
+      context: .              # Set the context (current directory)
+      dockerfile: Dockerfile  # Path to your Dockerfile (assuming it's named Dockerfile)
+    ports:
+      - "80:80"               # Expose port 80 to the host machine
+    restart: unless-stopped
